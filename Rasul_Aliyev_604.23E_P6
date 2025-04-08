@@ -1,0 +1,13 @@
+SOLUTION 5.1
+
+For, forEach and while is convenient for different taskes. Their syntax is different: for syntax - for (int i = 0; i < n; i++) { ... }
+forEach syntax - list.forEach((element) => ...)
+while syntax - while (condition) {}
+We usually use for loop when there is a exact number of iterations we need. We can make the loop iterte as much as we want. 
+forEach is used for lists. This loop help to choose each element from the list and makes iteration more simple. 
+While loop is like for but it terminates only when condition is not true. While loop is used mostly when we don't know the number of iterations.
+
+SOLUTION 5.2
+
+
+
