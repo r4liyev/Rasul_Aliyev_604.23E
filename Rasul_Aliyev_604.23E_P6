@@ -9,5 +9,96 @@ While loop is like for but it terminates only when condition is not true. While 
 
 SOLUTION 5.2
 
+int squareNumber(int n){
+  return n*n;
+}
+
+void main() {
+  var ourList = [2, 5, 1, 12, 10, 23];
+  
+  var squaredList = ourList.map(squareNumber).toList();
+  
+  for(int i = 0; i < 6; i++)
+  {
+    print(squaredList[i]);
+  }
+  
+}
+
+SOLUTION 5.3
+
+void checkPalin(String word){
+  bool isPalin = true;
+  for(int i = 0; i < word.length / 2; i++){
+    if (word[i] != word[word.length-1-i]){
+      isPalin = false;
+      break;
+    }
+  }
+  
+  if(isPalin){
+    print("This word is palindrome.");
+  }
+  else{
+    print("This word is not palindrome.");
+  }
+}
+
+void main() {
+  checkPalin("civic"); // with odd number palindrome
+  checkPalin("asddsa"); //with even number polindrome
+  checkPalin("class"); //with odd number non-polindrome
+  checkPalin("asddsd"); //with even number non-polindrome
+}
+
+SOLUTION 5.4
+
+class User {
+  String username;
+  String email;
+  
+  User(this.username, this.email);
+  
+  void displayInfo() {
+    print('Username: $username, Email: $email');
+  }
+  
+  void login() {
+    print('$username logged in');
+  }
+}
+
+class Admin extends User {
+  List<String> permissions;
+  
+  Admin(String username, String email, this.permissions) : super(username, email);
+  
+  @override
+  void login() {
+    super.login();
+    print('Admin privileges activated');
+  }
+  
+  void manageUsers() {
+    print('$username is managing users with permissions: $permissions');
+  }
+}
+
+void main() {
+  var admin = Admin('admin1', 'admin@example.com', ['create', 'delete', 'modify']);
+  admin.displayInfo();
+  admin.login();
+  admin.manageUsers();
+}
+
+
+
+
+
+
+
+
+
+
 
 
